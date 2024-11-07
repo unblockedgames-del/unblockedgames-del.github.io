@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themed Button Interface</title>
+    <style>
+        /* Root variables for theme colors */
+        :root {
+            --bg-color: #f4f7fc;
+            --text-color: #333;
+            --button-bg: linear-gradient(45deg, #ff6b6b, #ff9e2a);
+            --button-hover-bg: linear-gradient(45deg, #ff9e2a, #ff6b6b);
+        }
+
+        /* Global body and html styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Cool button styles */
+        .cool-button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            outline: none;
+            margin-top: 20px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .cool-button:hover {
+            background: var(--button-hover-bg);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Heading and paragraph styles */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Search bar styles */
+        #searchBar {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        /* Settings button and theme dropdown */
+        .settings-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        #settingsButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            background: #333;
+            color: white;
+        }
+
+        /* Theme dropdown with scrollbar for overflow */
+        .theme-dropdown {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            max-height: 200px; /* Set maximum height */
+            width: 200px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Enable vertical scrolling */
+            z-index: 10;
+        }
+
+        .theme-dropdown button {
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .theme-dropdown button:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="settings-container">
+        <button id="settingsButton">Settings</button>
+        <div class="theme-dropdown" id="themeDropdown">
+            <button onclick="changeTheme('light')">Light Theme</button>
+            <button onclick="changeTheme('dark')">Dark Theme</button>
+            <button onclick="changeTheme('red')">Red Theme</button>
+            <button onclick="changeTheme('mix')">Mix Theme</button>
+            <button onclick="changeTheme('blue')">Blue Theme</button>
+            <button onclick="changeTheme('green')">Green Theme</button>
+            <button onclick="changeTheme('purple')">Purple Theme</button>
+            <button onclick="changeTheme('warm')">Warm Theme</button>
+            <button onclick="changeTheme('cool')">Cool Theme</button>
+            <button onclick="changeTheme('sunset')">Sunset Theme</button>
+            <button onclick="changeTheme('ocean')">Ocean Theme</button>
+            <button onclick="changeTheme('forest')">Forest Theme</button>
+            <button onclick="changeTheme('pastel')">Pastel Theme</button>
+            <button onclick="changeTheme('contrast')">High Contrast Theme</button>
+        </div>
+    </div>
+
+    <h1>Themed Links</h1>
+    <p>Use the search bar to filter buttons, select a theme in Settings, and click buttons to open links.</p>
+    
+    <!-- Search bar -->
+    <input type="text" id="searchBar" placeholder="Search button...">
+
+    <!-- Buttons -->
+    <button class="cool-button" id="openBlobButton">Rammer Head</button>
+    <button class="cool-button" id="openSpaceProxyButton">Space Proxy</button>
+    <button class="cool-button" id="paper">Paper.io</button>
+
+    <script>
+        // Toggle theme dropdown visibility
+        document.getElementById('settingsButton').addEventListener('click', function() {
+            const dropdown = document.getElementById('themeDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Theme selection functionality
+        function changeTheme(theme) {
+            const root = document.documentElement;
+
+            switch(theme) {
+                case 'light':
+                    root.style.setProperty('--bg-color', '#f4f7fc');
+                    root.style.setProperty('--text-color', '#333');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff6b6b, #ff9e2a)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff9e2a, #ff6b6b)');
+                    break;
+                case 'dark':
+                    root.style.setProperty('--bg-color', '#1f1f1f');
+                    root.style.setProperty('--text-color', '#f4f7fc');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #333, #555)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #555, #333)');
+                    break;
+                case 'red':
+                    root.style.setProperty('--bg-color', '#ffebee');
+                    root.style.setProperty('--text-color', '#b71c1c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #d32f2f, #f44336)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #f44336, #d32f2f)');
+                    break;
+                case 'mix':
+                    root.style.setProperty('--bg-color', '#ffe0b2');
+                    root.style.setProperty('--text-color', '#4e342e');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #4e342e, #8d6e63)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #8d6e63, #4e342e)');
+                    break;
+                case 'blue':
+                    root.style.setProperty('--bg-color', '#e3f2fd');
+                    root.style.setProperty('--text-color', '#0d47a1');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #2196f3, #1976d2)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #1976d2, #2196f3)');
+                    break;
+                case 'green':
+                    root.style.setProperty('--bg-color', '#e8f5e9');
+                    root.style.setProperty('--text-color', '#1b5e20');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #4caf50, #388e3c)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #388e3c, #4caf50)');
+                    break;
+                case 'purple':
+                    root.style.setProperty('--bg-color', '#f3e5f5');
+                    root.style.setProperty('--text-color', '#4a148c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #8e24aa, #6a1b9a)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #6a1b9a, #8e24aa)');
+                    break;
+                case 'warm':
+                    root.style.setProperty('--bg-color', '#fff3e0');
+                    root.style.setProperty('--text-color', '#ff6f00');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff8f00, #ff6f00)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff6f00, #ff8f00)');
+                    break;
+                case 'cool':
+                    root.style.setProperty('--bg-color', '#e1f5fe');
+                    root.style.setProperty('--text-color', '#01579b');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #0288d1, #0277bd)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #0277bd, #0288d1)');
+                    break;
+                case 'sunset':
+                    root.style.setProperty('--bg-color', '#ffe0b2');
+                    root.style.setProperty('--text-color', '#bf360c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff7043, #d84315)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #d84315, #ff7043)');
+                    break;
+                case 'ocean':
+                    root.style.setProperty('--bg-color', '#e0f7fa');
+                    root.style.setProperty('--text-color', '#006064');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #00bcd4, #0097a7)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #0097a7, #00bcd4)');
+                    break;
+                case 'forest':
+                    root.style.setProperty('--bg-color', '#dcedc8');
+                    root.style.setProperty('--text-color', '#33691e');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #689f38, #558b2f)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #558b2f, #689f38)');
+                    break;
+                case 'pastel':
+                    root.style.setProperty('--bg-color', '#ffe4e1');
+                    root.style.setProperty('--text-color', '#5c5c5c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ffb6c1, #ff9e9e)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff9e9e, #ffb6c1)');
+                    break;
+                case 'contrast':
+                    root.style.setProperty('--bg-color', '#000000');
+                    root.style.setProperty('--text-color', '#ffffff');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ffffff, #333333)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #333333, #ffffff)');
+                    break;
+            }
+
+            // Hide theme dropdown after selection
+            document.getElementById('themeDropdown').style.display = 'none';
+        }
+
+        // Filter buttons based on search query
+        document.getElementById('searchBar').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const buttons = document.querySelectorAll('.cool-button');
+            buttons.forEach(button => {
+                if (button.textContent.toLowerCase().includes(query)) {
+                    button.style.display = 'inline-block';
+                } else {
+                    button.style.display = 'none';
+                }
+            });
+        });
+
+        // Open URLs in Blob
+        function openBlobUrl(url) {
+            const iframeHTML = `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Unblocked Site</title>
+                    <style>
+                        iframe {
+                            width: 100vw;
+                            height: 100vh;
+                            border: none;
+                        }
+                        body, html {
+                            margin: 0;
+                            padding: 0;
+                            height: 100%;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="https://coding-app.discoveryeducation.com/app/html-iframe/$%7Burl%7D" frameborder="0"></iframe>
+                </body>
+                </html>
+            `;
+            const blob = new Blob([iframeHTML], { type: 'text/html' });
+            const blobUrl = URL.createObjectURL(blob);
+            window.open(blobUrl);
+        }
+
+        document.getElementById('openBlobButton').addEventListener('click', () => openBlobUrl('https://testmode.lhost.dev'));
+        document.getElementById('openSpaceProxyButton').addEventListener('click', () => openBlobUrl('https://jayden-is.bestar.sg/'));
+        document.getElementById('paper').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Paper.io%202/main'));
+
+    </script>
+</body>
+</html>
