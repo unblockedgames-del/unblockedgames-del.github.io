@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://fdc8cbd2-5b3e-48e1-a97e-39d7501ff9b0-00-g21v65nvu258.worf.replit.dev/ -->
+<html lang="en" class="wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Game Links</title>
+    <style>
+        /* Root variables for theme colors */
+        :root {
+            --bg-color: #f4f7fc;
+            --text-color: #333;
+            --button-bg: linear-gradient(45deg, #ff6b6b, #ff9e2a);
+            --button-hover-bg: linear-gradient(45deg, #ff9e2a, #ff6b6b);
+        }
+
+        /* Global body and html styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Cool button styles */
+        .cool-button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            outline: none;
+            margin-top: 20px;
+            width: 200px;
+            text-align: center;
+            display: none; /* Hide initially for pagination */
+        }
+
+        .cool-button.show {
+            display: inline-block;
+        }
+
+        /* Pagination controls */
+        .pagination-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .pagination-controls button {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            background: #333;
+            color: white;
+        }
+
+        /* Search bar styles */
+        #searchBar {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+    </style><link rel="stylesheet" href="./upd1_files/css" media="all"><link rel="stylesheet" href="./upd1_files/css" media="all">
+</head>
+<body>
+
+    <h1>Unblocked Game Links</h1>
+    <p>Use the search bar to search for games, and click buttons to open links.</p>
+    
+    <!-- Search bar -->
+    <input type="text" id="searchBar" placeholder="Search Unblocked Games...">
+
+    <!-- Buttons -->
+    <button class="cool-button show" id="gr">Game Request</button>
+    <button class="cool-button show" id="openBlobButton">Rammer Head</button>
+    <button class="cool-button show" id="openSpaceProxyButton">Space Proxy</button>
+    <button class="cool-button show" id="paper">Paper.io</button>
+    <button class="cool-button show" id="chatgpt">Chatgpt</button>
+    <button class="cool-button" id="gladihoppers">Gladihoppers</button>
+    <button class="cool-button" id="shortrace">Shortcut Race</button>
+    <button class="cool-button" id="choporc">Choppy Orc</button>
+    <button class="cool-button" id="polytrack">Poly Track</button>
+    <button class="cool-button" id="cutrope">Cut the Rope</button>
+    <button class="cool-button" id="pixelshooter">Pixel Shooter</button>
+    <button class="cool-button" id="superhot">Super Hot</button>
+    <button class="cool-button" id="funobby">Fun Obby</button>
+    <button class="cool-button" id="gunspin">Gun Spin</button>
+    <button class="cool-button" id="jellytruck">Jelly Truck</button>
+    <button class="cool-button" id="stickgun">Stickman Gun Fight</button>
+    <button class="cool-button" id="granny">Granny</button>
+    <button class="cool-button" id="1v1lol">1v1.lol</button>
+    <button class="cool-button" id="monkeymart">Monkey Mart</button>
+
+    <!-- Pagination controls -->
+    <div class="pagination-controls">
+        <button id="prevPage" disabled="">Previous</button>
+        <button id="nextPage">Next</button>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.cool-button');
+        const buttonsPerPage = 5;
+        let currentPage = 1;
+
+        function showPage(page) {
+            buttons.forEach((button, index) => {
+                button.classList.remove('show');
+                if (index >= (page - 1) * buttonsPerPage && index < page * buttonsPerPage) {
+                    button.classList.add('show');
+                }
+            });
+        }
+
+        function updatePagination() {
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage === Math.ceil(buttons.length / buttonsPerPage);
+        }
+
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+                updatePagination();
+            }
+        });
+
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage < Math.ceil(buttons.length / buttonsPerPage)) {
+                currentPage++;
+                showPage(currentPage);
+                updatePagination();
+            }
+        });
+
+        // Initial setup
+        showPage(currentPage);
+        updatePagination();
+
+        // Filter buttons based on search query
+        document.getElementById('searchBar').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            buttons.forEach(button => {
+                button.style.display = button.textContent.toLowerCase().includes(query) ? 'inline-block' : 'none';
+            });
+        });
+                // Open URLs in Blob
+        function openBlobUrl(url) {
+            const iframeHTML = `
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Site</title>
+    <style>
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents scroll bars */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="${url}" frameborder="0"></iframe>
+</body>
+</html>
+
+            `;
+            const blob = new Blob([iframeHTML], { type: 'text/html' });
+            const blobUrl = URL.createObjectURL(blob);
+            window.open(blobUrl);
+        }
+
+        document.getElementById('openBlobButton').addEventListener('click', () => openBlobUrl('https://testmode.lhost.dev'));
+        document.getElementById('openSpaceProxyButton').addEventListener('click', () => openBlobUrl('https://jayden-is.bestar.sg/'));
+        document.getElementById('paper').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Paper.io%202/main'));
+        document.getElementById('chatgpt').addEventListener('click', () => openBlobUrl('https://smoresxo.shop/chat'));
+        document.getElementById('gr').addEventListener('click', () => openBlobUrl('https://docs.google.com/forms/d/e/1FAIpQLSdM6ZeR-GvuHsUvg3lNN-KASzl8lfWM25sjWNgk6yxJ0TSYxw/viewform?embedded=true'));
+        document.getElementById('gladihoppers').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/gladihoppers/'));
+        document.getElementById('shortrace').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/shortcut-race/'));
+        document.getElementById('choporc').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/choppy-orc/'));
+        document.getElementById('polytrack').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/polytrack/'));
+        document.getElementById('cutrope').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/cut-the-rope/'));
+        document.getElementById('pixelshooter').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/pixel-shooter/'));
+        document.getElementById('superhot').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/superhot/'));
+        document.getElementById('funobby').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/fun-obby/'));
+        document.getElementById('gunspin').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/gunspin/'));
+        document.getElementById('jellytruck').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/jelly-truck/'));
+        document.getElementById('stickgun').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/stickman-gun-fight/'));
+        document.getElementById('granny').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/granny/'));
+        document.getElementById('1v1lol').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/1v1lol/'));
+        document.getElementById('monkeymart').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/monkeymart/'));
+
+    </script>
+
+
+</body><div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div></html>
