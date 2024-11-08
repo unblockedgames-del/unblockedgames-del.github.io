@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://fdc8cbd2-5b3e-48e1-a97e-39d7501ff9b0-00-g21v65nvu258.worf.replit.dev/ -->
+<html lang="en" class="wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Game Links</title>
+    <style>
+        /* Root variables for theme colors */
+        :root {
+            --bg-color: #f4f7fc;
+            --text-color: #333;
+            --button-bg: linear-gradient(45deg, #ff6b6b, #ff9e2a);
+            --button-hover-bg: linear-gradient(45deg, #ff9e2a, #ff6b6b);
+        }
+
+        /* Global body and html styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Cool button styles */
+        .cool-button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            outline: none;
+            margin-top: 20px;
+            width: 200px;
+            text-align: center;
+            display: none; /* Hide initially for pagination */
+        }
+
+        .cool-button.show {
+            display: inline-block;
+        }
+
+        /* Pagination controls */
+        .pagination-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .pagination-controls button {
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            background: #333;
+            color: white;
+        }
+
+        /* Search bar styles */
+        #searchBar {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+        /* Settings button and theme dropdown */
+        .settings-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        #settingsButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+            background: #333;
+            color: white;
+        }
+
+        /* Theme dropdown with scrollbar for overflow */
+        .theme-dropdown {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            max-height: 200px; /* Set maximum height */
+            width: 200px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Enable vertical scrolling */
+            z-index: 10;
+        }
+
+        .theme-dropdown button {
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .theme-dropdown button:hover {
+            background: #f0f0f0;
+        }
+
+    </style><link rel="stylesheet" href="./upd2_files/css" media="all"><link rel="stylesheet" href="./upd2_files/css" media="all">
+</head>
+<body>
+	<div class="settings-container">
+        <button id="settingsButton">Settings</button>
+        <div class="theme-dropdown" id="themeDropdown">
+            <button onclick="changeTheme(&#39;light&#39;)">Light Theme</button>
+            <button onclick="changeTheme(&#39;dark&#39;)">Dark Theme</button>
+            <button onclick="changeTheme(&#39;red&#39;)">Red Theme</button>
+            <button onclick="changeTheme(&#39;mix&#39;)">Mix Theme</button>
+            <button onclick="changeTheme(&#39;blue&#39;)">Blue Theme</button>
+            <button onclick="changeTheme(&#39;green&#39;)">Green Theme</button>
+            <button onclick="changeTheme(&#39;purple&#39;)">Purple Theme</button>
+            <button onclick="changeTheme(&#39;warm&#39;)">Warm Theme</button>
+            <button onclick="changeTheme(&#39;cool&#39;)">Cool Theme</button>
+            <button onclick="changeTheme(&#39;sunset&#39;)">Sunset Theme</button>
+            <button onclick="changeTheme(&#39;ocean&#39;)">Ocean Theme</button>
+            <button onclick="changeTheme(&#39;forest&#39;)">Forest Theme</button>
+            <button onclick="changeTheme(&#39;pastel&#39;)">Pastel Theme</button>
+            <button onclick="changeTheme(&#39;contrast&#39;)">High Contrast Theme</button>
+        </div>
+    </div>
+    <h1>Unblocked Game Links</h1>
+    <p>Use the search bar to search for games, and click buttons to open links.</p>
+    
+    <!-- Search bar -->
+    <input type="text" id="searchBar" placeholder="Search Unblocked Games...">
+
+    <!-- Buttons -->
+    <button class="cool-button show" id="gr">Game Request</button>
+    <button class="cool-button show" id="openBlobButton">Rammer Head</button>
+    <button class="cool-button show" id="openSpaceProxyButton">Space Proxy</button>
+    <button class="cool-button show" id="paper">Paper.io</button>
+    <button class="cool-button show" id="chatgpt">Chatgpt</button>
+    <button class="cool-button" id="gladihoppers">Gladihoppers</button>
+    <button class="cool-button" id="shortrace">Shortcut Race</button>
+    <button class="cool-button" id="choporc">Choppy Orc</button>
+    <button class="cool-button" id="polytrack">Poly Track</button>
+    <button class="cool-button" id="cutrope">Cut the Rope</button>
+    <button class="cool-button" id="pixelshooter">Pixel Shooter</button>
+    <button class="cool-button" id="superhot">Super Hot</button>
+    <button class="cool-button" id="funobby">Fun Obby</button>
+    <button class="cool-button" id="gunspin">Gun Spin</button>
+    <button class="cool-button" id="jellytruck">Jelly Truck</button>
+    <button class="cool-button" id="stickgun">Stickman Gun Fight</button>
+    <button class="cool-button" id="granny">Granny</button>
+    <button class="cool-button" id="1v1lol">1v1.lol</button>
+    <button class="cool-button" id="monkeymart">Monkey Mart</button>
+    <button class="cool-button" id="ironsnout">iron snout</button>
+    <button class="cool-button" id="bitlife">bitlife</button>
+    <button class="cool-button" id="slope3">slope 3</button>
+    <button class="cool-button" id="slopey">slopey</button>
+    <button class="cool-button" id="cookie">cookie clicker</button>
+    <button class="cool-button" id="angrybirds">angry birds</button>
+
+    <!-- Pagination controls -->
+    <div class="pagination-controls">
+        <button id="prevPage" disabled="">Previous</button>
+        <button id="nextPage">Next</button>
+    </div>
+
+    <script>
+        // Toggle theme dropdown visibility
+        document.getElementById('settingsButton').addEventListener('click', function() {
+            const dropdown = document.getElementById('themeDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Theme selection functionality
+        function changeTheme(theme) {
+            const root = document.documentElement;
+
+            switch(theme) {
+                case 'light':
+                    root.style.setProperty('--bg-color', '#f4f7fc');
+                    root.style.setProperty('--text-color', '#333');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff6b6b, #ff9e2a)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff9e2a, #ff6b6b)');
+                    break;
+                case 'dark':
+                    root.style.setProperty('--bg-color', '#1f1f1f');
+                    root.style.setProperty('--text-color', '#f4f7fc');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #333, #555)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #555, #333)');
+                    break;
+                case 'red':
+                    root.style.setProperty('--bg-color', '#ffebee');
+                    root.style.setProperty('--text-color', '#b71c1c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #d32f2f, #f44336)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #f44336, #d32f2f)');
+                    break;
+                case 'mix':
+                    root.style.setProperty('--bg-color', '#ffe0b2');
+                    root.style.setProperty('--text-color', '#4e342e');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #4e342e, #8d6e63)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #8d6e63, #4e342e)');
+                    break;
+                case 'blue':
+                    root.style.setProperty('--bg-color', '#e3f2fd');
+                    root.style.setProperty('--text-color', '#0d47a1');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #2196f3, #1976d2)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #1976d2, #2196f3)');
+                    break;
+                case 'green':
+                    root.style.setProperty('--bg-color', '#e8f5e9');
+                    root.style.setProperty('--text-color', '#1b5e20');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #4caf50, #388e3c)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #388e3c, #4caf50)');
+                    break;
+                case 'purple':
+                    root.style.setProperty('--bg-color', '#f3e5f5');
+                    root.style.setProperty('--text-color', '#4a148c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #8e24aa, #6a1b9a)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #6a1b9a, #8e24aa)');
+                    break;
+                case 'warm':
+                    root.style.setProperty('--bg-color', '#fff3e0');
+                    root.style.setProperty('--text-color', '#ff6f00');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff8f00, #ff6f00)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff6f00, #ff8f00)');
+                    break;
+                case 'cool':
+                    root.style.setProperty('--bg-color', '#e1f5fe');
+                    root.style.setProperty('--text-color', '#01579b');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #0288d1, #0277bd)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #0277bd, #0288d1)');
+                    break;
+                case 'sunset':
+                    root.style.setProperty('--bg-color', '#ffe0b2');
+                    root.style.setProperty('--text-color', '#bf360c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff7043, #d84315)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #d84315, #ff7043)');
+                    break;
+                case 'ocean':
+                    root.style.setProperty('--bg-color', '#e0f7fa');
+                    root.style.setProperty('--text-color', '#006064');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #00bcd4, #0097a7)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #0097a7, #00bcd4)');
+                    break;
+                case 'forest':
+                    root.style.setProperty('--bg-color', '#dcedc8');
+                    root.style.setProperty('--text-color', '#33691e');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #689f38, #558b2f)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #558b2f, #689f38)');
+                    break;
+                case 'pastel':
+                    root.style.setProperty('--bg-color', '#ffe4e1');
+                    root.style.setProperty('--text-color', '#5c5c5c');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ffb6c1, #ff9e9e)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff9e9e, #ffb6c1)');
+                    break;
+                case 'contrast':
+                    root.style.setProperty('--bg-color', '#000000');
+                    root.style.setProperty('--text-color', '#ffffff');
+                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ffffff, #333333)');
+                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #333333, #ffffff)');
+                    break;
+            }
+
+            // Hide theme dropdown after selection
+            document.getElementById('themeDropdown').style.display = 'none';
+        }
+
+        const buttons = document.querySelectorAll('.cool-button');
+        const buttonsPerPage = 5;
+        let currentPage = 1;
+
+        function showPage(page) {
+            buttons.forEach((button, index) => {
+                button.classList.remove('show');
+                if (index >= (page - 1) * buttonsPerPage && index < page * buttonsPerPage) {
+                    button.classList.add('show');
+                }
+            });
+        }
+
+        function updatePagination() {
+            document.getElementById('prevPage').disabled = currentPage === 1;
+            document.getElementById('nextPage').disabled = currentPage === Math.ceil(buttons.length / buttonsPerPage);
+        }
+
+        document.getElementById('prevPage').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+                updatePagination();
+            }
+        });
+
+        document.getElementById('nextPage').addEventListener('click', () => {
+            if (currentPage < Math.ceil(buttons.length / buttonsPerPage)) {
+                currentPage++;
+                showPage(currentPage);
+                updatePagination();
+            }
+        });
+
+        // Initial setup
+        showPage(currentPage);
+        updatePagination();
+
+        // Filter buttons based on search query
+        document.getElementById('searchBar').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            buttons.forEach(button => {
+                button.style.display = button.textContent.toLowerCase().includes(query) ? 'inline-block' : 'none';
+            });
+        });
+                // Open URLs in Blob
+        function openBlobUrl(url) {
+            const iframeHTML = `
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Site</title>
+    <style>
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents scroll bars */
+        }
+    </style>
+</head>
+<body>
+    <iframe src="${url}" frameborder="0"></iframe>
+</body>
+</html>
+
+            `;
+            const blob = new Blob([iframeHTML], { type: 'text/html' });
+            const blobUrl = URL.createObjectURL(blob);
+            window.open(blobUrl);
+        }
+
+        document.getElementById('openBlobButton').addEventListener('click', () => openBlobUrl('https://testmode.lhost.dev'));
+        document.getElementById('openSpaceProxyButton').addEventListener('click', () => openBlobUrl('https://jayden-is.bestar.sg/'));
+        document.getElementById('paper').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Paper.io%202/main'));
+        document.getElementById('chatgpt').addEventListener('click', () => openBlobUrl('https://smoresxo.shop/chat'));
+        document.getElementById('gr').addEventListener('click', () => openBlobUrl('https://docs.google.com/forms/d/e/1FAIpQLSdM6ZeR-GvuHsUvg3lNN-KASzl8lfWM25sjWNgk6yxJ0TSYxw/viewform?embedded=true'));
+        document.getElementById('gladihoppers').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/gladihoppers/'));
+        document.getElementById('shortrace').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/shortcut-race/'));
+        document.getElementById('choporc').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/choppy-orc/'));
+        document.getElementById('polytrack').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/polytrack/'));
+        document.getElementById('cutrope').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/cut-the-rope/'));
+        document.getElementById('pixelshooter').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/pixel-shooter/'));
+        document.getElementById('superhot').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/superhot/'));
+        document.getElementById('funobby').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/fun-obby/'));
+        document.getElementById('gunspin').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/gunspin/'));
+        document.getElementById('jellytruck').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/jelly-truck/'));
+        document.getElementById('stickgun').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/stickman-gun-fight/'));
+        document.getElementById('granny').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/granny/'));
+        document.getElementById('1v1lol').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/1v1lol/'));
+        document.getElementById('monkeymart').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/monkeymart/'));
+        document.getElementById('ironsnout').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/iron-snout/'));
+        document.getElementById('bitlife').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/bitlife/'));
+        document.getElementById('slope3').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/slope3/'));
+        document.getElementById('slopey').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/slopey/'));
+        document.getElementById('cookie').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Cookie Clicker/main.html'));
+        document.getElementById('angrybirds').addEventListener('click', () => openBlobUrl('https://rawcdn.githack.com/lioxryt/lioxryt-assets/0cf7d107ddb99c99ea20387522aa29b8ee382049/other/angrybirds/index.html'));
+
+    </script>
+
+
+</body><div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div></html>
