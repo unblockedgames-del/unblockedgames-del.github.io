@@ -4,6 +4,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unblocked Game Links</title>
     <style>
+        /* Dark yellow, solid glow effect with arrows */
+        #afk.glow {
+            animation: solidDarkYellowGlow 1.5s infinite alternate;
+            position: relative;
+        }
+
+        /* Keyframe animation for the dark yellow glow */
+        @keyframes solidDarkYellowGlow {
+            0% {
+                box-shadow: 
+                    0 0 15px #FFD700,    
+                    0 0 30px #FFA500,    
+                    0 0 45px #FFD700,
+                    0 0 60px #FFA500,
+                    0 0 75px #FFD700;
+            }
+            100% {
+                box-shadow: 
+                    0 0 25px #FFD700,
+                    0 0 50px #FFA500,
+                    0 0 75px #FFD700,
+                    0 0 100px #FFA500,
+                    0 0 125px #FFD700;
+            }
+        }
+
+        /* Arrows pointing to the button */
+        #afk.glow::before,
+        #afk.glow::after {
+            content: '➤';  /* Arrow symbol */
+            position: absolute;
+            font-size: 24px;
+            color: #FFD700;
+            animation: arrowBlink 1s infinite alternate;
+        }
+
+        #afk.glow::before {
+            left: -60px;  /* Position left arrow further out */
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg); /* Pointing right at the button */
+        }
+
+        #afk.glow::after {
+            right: -60px;  /* Position right arrow further out */
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg); /* Pointing left at the button */
+        }
+
+        /* Arrow animation to blink for attention */
+        @keyframes arrowBlink {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
         /* Root variables for theme colors */
         :root {
             --bg-color: #f4f7fc;
@@ -159,32 +219,9 @@
     <input type="text" id="searchBar" placeholder="Search Unblocked Games...">
 
     <!-- Buttons -->
-    <button class="cool-button show" id="gr">Game Request</button>
-    <button class="cool-button show" id="openBlobButton">Rammer Head</button>
-    <button class="cool-button show" id="openSpaceProxyButton">Space Proxy</button>
-    <button class="cool-button show" id="paper">Paper.io</button>
-    <button class="cool-button show" id="chatgpt">Chatgpt</button>
-    <button class="cool-button" id="gladihoppers">Gladihoppers</button>
-    <button class="cool-button" id="shortrace">Shortcut Race</button>
-    <button class="cool-button" id="choporc">Choppy Orc</button>
-    <button class="cool-button" id="polytrack">Poly Track</button>
-    <button class="cool-button" id="cutrope">Cut the Rope</button>
-    <button class="cool-button" id="pixelshooter">Pixel Shooter</button>
-    <button class="cool-button" id="superhot">Super Hot</button>
-    <button class="cool-button" id="funobby">Fun Obby</button>
-    <button class="cool-button" id="gunspin">Gun Spin</button>
-    <button class="cool-button" id="jellytruck">Jelly Truck</button>
-    <button class="cool-button" id="stickgun">Stickman Gun Fight</button>
-    <button class="cool-button" id="granny">Granny</button>
-    <button class="cool-button" id="1v1lol">1v1.lol</button>
-    <button class="cool-button" id="monkeymart">Monkey Mart</button>
-    <button class="cool-button" id="ironsnout">iron snout</button>
-    <button class="cool-button" id="bitlife">bitlife</button>
-    <button class="cool-button" id="slope3">slope 3</button>
-    <button class="cool-button" id="slopey">slopey</button>
-    <button class="cool-button" id="cookie">cookie clicker</button>
-    <button class="cool-button" id="angrybirds">angry birds</button>
+    <button class="cool-button show glow" id="afk">launch update 3</button>
 
+   
     <!-- Pagination controls -->
     <div class="pagination-controls">
         <button id="prevPage" disabled="">Previous</button>
@@ -372,31 +409,8 @@
             window.open(blobUrl);
         }
 
-        document.getElementById('openBlobButton').addEventListener('click', () => openBlobUrl('https://testmode.lhost.dev'));
-        document.getElementById('openSpaceProxyButton').addEventListener('click', () => openBlobUrl('https://jayden-is.bestar.sg/'));
-        document.getElementById('paper').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Paper.io%202/main'));
-        document.getElementById('chatgpt').addEventListener('click', () => openBlobUrl('https://smoresxo.shop/chat'));
-        document.getElementById('gr').addEventListener('click', () => openBlobUrl('https://docs.google.com/forms/d/e/1FAIpQLSdM6ZeR-GvuHsUvg3lNN-KASzl8lfWM25sjWNgk6yxJ0TSYxw/viewform?embedded=true'));
-        document.getElementById('gladihoppers').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/gladihoppers/'));
-        document.getElementById('shortrace').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/shortcut-race/'));
-        document.getElementById('choporc').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/choppy-orc/'));
-        document.getElementById('polytrack').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/polytrack/'));
-        document.getElementById('cutrope').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/cut-the-rope/'));
-        document.getElementById('pixelshooter').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/pixel-shooter/'));
-        document.getElementById('superhot').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/superhot/'));
-        document.getElementById('funobby').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/fun-obby/'));
-        document.getElementById('gunspin').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/gunspin/'));
-        document.getElementById('jellytruck').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/jelly-truck/'));
-        document.getElementById('stickgun').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/stickman-gun-fight/'));
-        document.getElementById('granny').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/granny/'));
-        document.getElementById('1v1lol').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/1v1lol/'));
-        document.getElementById('monkeymart').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/monkeymart/'));
-        document.getElementById('ironsnout').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/iron-snout/'));
-        document.getElementById('bitlife').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/bitlife/'));
-        document.getElementById('slope3').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/slope3/'));
-        document.getElementById('slopey').addEventListener('click', () => openBlobUrl('https://gnhustgames.github.io/slopey/'));
-        document.getElementById('cookie').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Cookie Clicker/main.html'));
-        document.getElementById('angrybirds').addEventListener('click', () => openBlobUrl('https://rawcdn.githack.com/lioxryt/lioxryt-assets/0cf7d107ddb99c99ea20387522aa29b8ee382049/other/angrybirds/index.html'));
+        document.getElementById('afk').addEventListener('click', () => openBlobUrl('https://unblockedgames-del.github.io/realupd3'));
+
 
     </script>
 
