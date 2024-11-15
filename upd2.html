@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" class="wf-roboto-n3-active wf-roboto-n4-active wf-roboto-n5-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -192,167 +193,16 @@
     </style><link rel="stylesheet" href="./upd2_files/css" media="all"><link rel="stylesheet" href="./upd2_files/css" media="all">
 </head>
 <body>
-	
-    
-    
-    
-    <!-- Search bar -->
-    
+
 
     <!-- Buttons -->
-    <button class="cool-button glow show" id="afk">launch update 3</button>
+    <button class="super-cool-button" id="afk">launch update 3</button>
 
    
-    <!-- Pagination controls -->
-    
+
 
     <script>
-        // Toggle theme dropdown visibility
-        document.getElementById('settingsButton').addEventListener('click', function() {
-            const dropdown = document.getElementById('themeDropdown');
-            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-        });
 
-        // Theme selection functionality
-        function changeTheme(theme) {
-            const root = document.documentElement;
-
-            switch(theme) {
-                case 'light':
-                    root.style.setProperty('--bg-color', '#f4f7fc');
-                    root.style.setProperty('--text-color', '#333');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff6b6b, #ff9e2a)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff9e2a, #ff6b6b)');
-                    break;
-                case 'dark':
-                    root.style.setProperty('--bg-color', '#1f1f1f');
-                    root.style.setProperty('--text-color', '#f4f7fc');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #333, #555)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #555, #333)');
-                    break;
-                case 'red':
-                    root.style.setProperty('--bg-color', '#ffebee');
-                    root.style.setProperty('--text-color', '#b71c1c');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #d32f2f, #f44336)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #f44336, #d32f2f)');
-                    break;
-                case 'mix':
-                    root.style.setProperty('--bg-color', '#ffe0b2');
-                    root.style.setProperty('--text-color', '#4e342e');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #4e342e, #8d6e63)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #8d6e63, #4e342e)');
-                    break;
-                case 'blue':
-                    root.style.setProperty('--bg-color', '#e3f2fd');
-                    root.style.setProperty('--text-color', '#0d47a1');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #2196f3, #1976d2)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #1976d2, #2196f3)');
-                    break;
-                case 'green':
-                    root.style.setProperty('--bg-color', '#e8f5e9');
-                    root.style.setProperty('--text-color', '#1b5e20');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #4caf50, #388e3c)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #388e3c, #4caf50)');
-                    break;
-                case 'purple':
-                    root.style.setProperty('--bg-color', '#f3e5f5');
-                    root.style.setProperty('--text-color', '#4a148c');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #8e24aa, #6a1b9a)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #6a1b9a, #8e24aa)');
-                    break;
-                case 'warm':
-                    root.style.setProperty('--bg-color', '#fff3e0');
-                    root.style.setProperty('--text-color', '#ff6f00');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff8f00, #ff6f00)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff6f00, #ff8f00)');
-                    break;
-                case 'cool':
-                    root.style.setProperty('--bg-color', '#e1f5fe');
-                    root.style.setProperty('--text-color', '#01579b');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #0288d1, #0277bd)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #0277bd, #0288d1)');
-                    break;
-                case 'sunset':
-                    root.style.setProperty('--bg-color', '#ffe0b2');
-                    root.style.setProperty('--text-color', '#bf360c');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ff7043, #d84315)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #d84315, #ff7043)');
-                    break;
-                case 'ocean':
-                    root.style.setProperty('--bg-color', '#e0f7fa');
-                    root.style.setProperty('--text-color', '#006064');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #00bcd4, #0097a7)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #0097a7, #00bcd4)');
-                    break;
-                case 'forest':
-                    root.style.setProperty('--bg-color', '#dcedc8');
-                    root.style.setProperty('--text-color', '#33691e');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #689f38, #558b2f)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #558b2f, #689f38)');
-                    break;
-                case 'pastel':
-                    root.style.setProperty('--bg-color', '#ffe4e1');
-                    root.style.setProperty('--text-color', '#5c5c5c');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ffb6c1, #ff9e9e)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #ff9e9e, #ffb6c1)');
-                    break;
-                case 'contrast':
-                    root.style.setProperty('--bg-color', '#000000');
-                    root.style.setProperty('--text-color', '#ffffff');
-                    root.style.setProperty('--button-bg', 'linear-gradient(45deg, #ffffff, #333333)');
-                    root.style.setProperty('--button-hover-bg', 'linear-gradient(45deg, #333333, #ffffff)');
-                    break;
-            }
-
-            // Hide theme dropdown after selection
-            document.getElementById('themeDropdown').style.display = 'none';
-        }
-
-        const buttons = document.querySelectorAll('.cool-button');
-        const buttonsPerPage = 5;
-        let currentPage = 1;
-
-        function showPage(page) {
-            buttons.forEach((button, index) => {
-                button.classList.remove('show');
-                if (index >= (page - 1) * buttonsPerPage && index < page * buttonsPerPage) {
-                    button.classList.add('show');
-                }
-            });
-        }
-
-        function updatePagination() {
-            document.getElementById('prevPage').disabled = currentPage === 1;
-            document.getElementById('nextPage').disabled = currentPage === Math.ceil(buttons.length / buttonsPerPage);
-        }
-
-        document.getElementById('prevPage').addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                showPage(currentPage);
-                updatePagination();
-            }
-        });
-
-        document.getElementById('nextPage').addEventListener('click', () => {
-            if (currentPage < Math.ceil(buttons.length / buttonsPerPage)) {
-                currentPage++;
-                showPage(currentPage);
-                updatePagination();
-            }
-        });
-
-        // Initial setup
-        showPage(currentPage);
-        updatePagination();
-
-        // Filter buttons based on search query
-        document.getElementById('searchBar').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            buttons.forEach(button => {
-                button.style.display = button.textContent.toLowerCase().includes(query) ? 'inline-block' : 'none';
-            });
-        });
                 // Open URLs in Blob
         function openBlobUrl(url) {
             const iframeHTML = `
@@ -393,5 +243,4 @@
     </script>
 
 
-<div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div>
-</body></html>
+</body><div class="notranslate" style="position: absolute; top: 0; right:0;" id="vd-root-d19608294"></div></html>
