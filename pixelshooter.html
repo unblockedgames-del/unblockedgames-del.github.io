@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obfuscated Blob Fullscreen Iframe</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="blobIframe"></iframe>
+
+    <script>
+        const base64Content = `PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+RnVsbHNjcmVlbiBJZnJhbWU8L3RpdGxlPgogICAgPHN0eWxlPgogICAgICAgIC8qIEVuc3VyZSB0aGUgYm9keSBhbmQgaHRtbCBlbGVtZW50cyB0YWtlIGZ1bGwgaGVpZ2h0ICovCiAgICAgICAgaHRtbCwgYm9keSB7CiAgICAgICAgICAgIG1hcmdpbjogMDsKICAgICAgICAgICAgcGFkZGluZzogMDsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjsgLyogT3B0aW9uYWw6IFByZXZlbnRzIHNjcm9sbGluZyAqLwogICAgICAgIH0KCiAgICAgICAgLyogTWFrZSB0aGUgaWZyYW1lIHRha2UgdXAgdGhlIGZ1bGwgc2NyZWVuICovCiAgICAgICAgaWZyYW1lIHsKICAgICAgICAgICAgd2lkdGg6IDEwMCU7CiAgICAgICAgICAgIGhlaWdodDogMTAwJTsKICAgICAgICAgICAgYm9yZGVyOiBub25lOyAvKiBPcHRpb25hbDogUmVtb3ZlcyBpZnJhbWUgYm9yZGVyICovCiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keT4KICAgIDxpZnJhbWUgc3JjPSJodHRwczovL2duaHVzdGdhbWVzLmdpdGh1Yi5pby9waXhlbC1zaG9vdGVyLyIgdGl0bGU9IkZ1bGxzY3JlZW4gSWZyYW1lIj48L2lmcmFtZT4KPC9ib2R5Pgo8L2h0bWw+Cg==`;
+
+        const decodedContent = atob(base64Content);
+
+        const blob = new Blob([decodedContent], { type: 'text/html' });
+
+        const blobURL = URL.createObjectURL(blob);
+
+        const iframe = document.getElementById('blobIframe');
+        iframe.src = blobURL;
+
+        iframe.onload = () => {
+            // URL.revokeObjectURL(blobURL);
+        };
+    </script>
+</body>
+</html>
