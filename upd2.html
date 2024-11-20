@@ -44,29 +44,12 @@
             margin-top: 20px;
             width: 200px;
             text-align: center;
-            display: none; /* Hide initially for pagination */
+            display: inline-block; /* Show all buttons */
+            margin-right: 10px; /* Add space between buttons */
         }
 
-        .cool-button.show {
-            display: inline-block;
-        }
-
-        /* Pagination controls */
-        .pagination-controls {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .pagination-controls button {
-            padding: 10px 15px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 10px;
-            border: none;
-            background: #333;
-            color: white;
+        .cool-button:hover {
+            background: var(--button-hover-bg);
         }
 
         /* Search bar styles */
@@ -130,9 +113,18 @@
             background: #f0f0f0;
         }
 
+        /* Button Container - Flexbox layout */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to next line */
+            justify-content: center; /* Center the buttons */
+            gap: 5px; /* Space between buttons */
+            width: 100%; /* Adjust width as needed */
+        }
     </style><link rel="stylesheet" href="./upd2_files/css" media="all"><link rel="stylesheet" href="./upd2_files/css" media="all">
 </head>
 <body>
+  <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
 	<div class="settings-container">
         <button id="settingsButton">Settings</button>
         <div class="theme-dropdown" id="themeDropdown">
@@ -153,64 +145,55 @@
         </div>
     </div>
     <h1>Unblocked Game Links</h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-
     <p>Use the search bar to search for games, and click buttons to open links.</p>
 
     <!-- Search bar -->
     <input type="text" id="searchBar" placeholder="Search Unblocked Games...">
 
-    <!-- Buttons -->
-    <button class="cool-button show" id="openBlobButton"><img src="https://tse3.mm.bing.net/th?id=OIP.cdVwTuF7Zi0k-dXo-ack3wAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Rammer Head</button>
-    <button class="cool-button show" id="openSpaceProxyButton"><img src="https://tse2.mm.bing.net/th?id=OIP.JNIwK8Wu0HY2KaKUCfeZ_wHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>Space Proxy</button>
-    <button class="cool-button" id="ninja"><img src="https://tse3.mm.bing.net/th?id=OIP.w6OhGvv1DMfZKU7Cc1SKcAHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>ninja.io</button>
-	<button class="cool-button show" id="bloxd"><img src="https://tse3.mm.bing.net/th?id=OIP.Ux7f9vWkliqucoPNL50yZQHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>bloxd.io</button>
-    <button class="cool-button show" id="chatgpt"><img src="https://tse2.mm.bing.net/th?id=OIP.DlUIwVcvo76zzfzogiPKAwHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Chatgpt</button>
-    <button class="cool-button show" id="paper"><img src="https://tse3.mm.bing.net/th?id=OIP.wki2yC6nPdvjMQlyVvgOwAHaCH&pid=Api&P=0&h=180" width="75%" height="65%"><br>Paper.io</button>
-    <button class="cool-button" id="gladihoppers"><img src="https://tse2.mm.bing.net/th?id=OIP.VqRrEB6eIBGVW_BjsZTQ3gHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Gladihoppers</button>
-    <button class="cool-button" id="shortrace"><img src="https://tse3.mm.bing.net/th?id=OIP.3PVrSABqKGKVAhX_Dav56wHaEL&pid=Api&P=0&h=180" width="75%" height="65%"><br>Shortcut Race</button>
-    <button class="cool-button" id="choporc"><img src="https://tse1.mm.bing.net/th?id=OIP.uihIQo1bkW35TxlKqTMcNwHaD0&pid=Api&P=0&h=180" width="75%" height="65%"><br>Choppy Orc</button>
-    <button class="cool-button" id="polytrack"><img src="https://tse2.mm.bing.net/th?id=OIP.lUMJvNYW2YDWplM6Tkp27gHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Poly Track</button>
-    <button class="cool-button" id="cutrope"><img src="https://tse2.mm.bing.net/th?id=OIP.vcVxg1Cxk7Ox6srDqV_aAwAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Cut the Rope</button>
-    <button class="cool-button" id="pixelshooter"><img src="https://tse2.mm.bing.net/th?id=OIP.VxDqMn6x0kbMFB7rN-KUugHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>Pixel Shooter</button>
-    <button class="cool-button" id="superhot"><img src="https://tse2.mm.bing.net/th?id=OIP.-t7m0wn5aZyfZ3JqmpiX6AHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Super Hot</button>
-    <button class="cool-button" id="funobby"><img src="https://tse2.mm.bing.net/th?id=OIP.eP44tchHq5BywzjJfJuO0gHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Fun Obby</button>
-    <button class="cool-button" id="gunspin"><img src="https://tse2.mm.bing.net/th?id=OIP.6NWJPnaB0O-zOXvXLqKztwHaFj&pid=Api&P=0&h=180" width="75%" height="65%"><br>Gun Spin</button>
-    <button class="cool-button" id="jellytruck"><img src="https://tse1.mm.bing.net/th?id=OIP.VnKXF1iZVlT223vdHKRTIQHaEU&pid=Api&P=0&h=180" width="75%" height="65%"><br>Jelly Truck</button>
-    <button class="cool-button" id="stickgun"><img src="https://tse1.mm.bing.net/th?id=OIP.vhWo1oEUFGhvT-K-nR_sqAHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Stickman Gun Fight</button>
-    <button class="cool-button" id="granny"><img src="https://tse1.mm.bing.net/th?id=OIP.VDcWcDoPrLb4FVIZWNzT8QHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Granny</button>
-    <button class="cool-button" id="1v1lol"><img src="https://tse3.mm.bing.net/th?id=OIP.ieJF2l4ZJ0F-oagtSqtJowHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>1v1.lol</button>
-    <button class="cool-button" id="monkeymart"><img src="https://tse2.mm.bing.net/th?id=OIP.GmKIjCrlse8QXE9EB8175gHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Monkey Mart</button>
-    <button class="cool-button" id="ironsnout"><img src="https://tse4.mm.bing.net/th?id=OIP.S6oqZeOdDceQ5jSOX8SJZgHaEP&pid=Api&P=0&h=180" width="75%" height="65%"><br>iron snout</button>
-    <button class="cool-button" id="bitlife"><img src="https://tse1.mm.bing.net/th?id=OIP.phveCkF0phH_6YzbNVlo8AHaCe&pid=Api&P=0&h=180" width="75%" height="65%"><br>bitlife</button>
-    <button class="cool-button" id="slope3"><img src="https://tse1.mm.bing.net/th?id=OIP.KzxOUOVp0p1-zQK-BsJCVQAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>slope 3</button>
-    <button class="cool-button" id="slopey"><img src="https://tse1.mm.bing.net/th?id=OIP.VD10XXy_vL6LovrjGsUx-QHaEo&pid=Api&P=0&h=180" width="75%" height="65%"><br>slopey</button>
-    <button class="cool-button" id="cookie"><img src="https://tse4.mm.bing.net/th?id=OIP.RuUX2xlZdDLu0zN8kBCIGAHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>cookie clicker</button>
-    <button class="cool-button" id="angrybirds"><img src="https://tse3.mm.bing.net/th?id=OIP.g_dA87L2ebMwgvLj_eQ8pwHaE6&pid=Api&P=0&h=180" width="75%" height="65%"><br>angry birds</button>
-  <button class="cool-button" id="foggyfox"><img src="https://tse1.mm.bing.net/th?id=OIP.5hBqI2ZtJx9iPilF-WMFVgHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>foggy fox</button>
-  <button class="cool-button" id="darkroom"><img src="https://tse4.mm.bing.net/th?id=OIP.RuUX2xlZdDLu0zN8kBCIGAHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>a dark room</button>
-  <button class="cool-button" id="10dawn"><img src="https://tse2.mm.bing.net/th?id=OIP.Kq4jLVkO82hDFcBOl0tJuAHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>10 minutes till dawn</button>
-  <button class="cool-button" id="ovo"><img src="https://tse2.mm.bing.net/th?id=OIP.WiGjXc0azSZKRet-aHpiwAHaET&pid=Api&P=0&h=180" width="75%" height="75%"><br>ovo</button>
-  <button class="cool-button" id="twobox"><img src="https://tse1.mm.bing.net/th?id=OIP.P-z5uallDrIZldPtj8nQWwAAAA&pid=Api&P=0&h=180" width="75%" height="75%"><br>two neon boxes</button>
-  <button class="cool-button" id="tombmask"><img src="https://tse1.mm.bing.net/th?id=OIP.-Agv-pita2PJQN95kiD-rgHaFj&pid=Api&P=0&h=180" width="75%" height="75%"><br>tomb of the mask</button>
-  <button class="cool-button" id="eggycar"><img src="https://tse2.mm.bing.net/th?id=OIP.8rusvmSjuyafH-Y73iU4dgHaD4&pid=Api&P=0&h=180" width="75%" height="75%"><br>eggy car</button>
-  <button class="cool-button" id="blockpost"><img src="https://tse2.mm.bing.net/th?id=OIP.9uXSy8TYIgOW-dVynr1m9wHaHa&pid=Api&P=0&h=180" width="75%" height="75%"><br>block post</button>
-  <button class="cool-button" id="dta9"><img src="https://tse3.mm.bing.net/th?id=OIP.LekGKlyJzarIfykestvQygCgB4&pid=Api&P=0&h=180" width="75%" height="75%"><br>dta 9</button>
-  <button class="cool-button" id="dta6"><img src="https://tse4.mm.bing.net/th?id=OIP.UUlZt_m9Q5rgcnSE18h6BAAAAA&pid=Api&P=0&h=180" width="75%" height="75%"><br>dta 6</button>
-  <button class="cool-button" id="tallio"><img src="https://tse4.mm.bing.net/th?id=OIP.nywt57e1SdiyQzk4AImv7QHaD4&pid=Api&P=0&h=180" width="75%" height="75%"><br>tall.io</button>
-  <button class="cool-button" id="protectmydog"><img src="https://tse3.mm.bing.net/th?id=OIP.wJHzamNyZWsT7GsWI6TQfwHaEM&pid=Api&P=0&h=180" width="75%" height="75%"><br>protect my dog</button>
-  <button class="cool-button" id="dgmn2"><img src="https://tse4.mm.bing.net/th?id=OIP.i0RUFCEH4yfzLn4dagtYjgHaHa&pid=Api&P=0&h=180" width="75%" height="75%"><br>doge miner 2</button>
-
-    <!-- Pagination controls -->
-    <div class="pagination-controls">
-        <button id="prevPage" disabled="">Previous</button>
-        <button id="nextPage">Next</button>
+    <!-- Button container -->
+    <div class="button-container">
+        <!-- Buttons -->
+        <button class="cool-button" id="gr"><img src="https://tse1.mm.bing.net/th?id=OIP.VRdMj_cZE3DCtUyb54YFeAHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Game Request</button>
+        <button class="cool-button" id="openBlobButton"><img src="https://tse3.mm.bing.net/th?id=OIP.cdVwTuF7Zi0k-dXo-ack3wAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Rammer Head</button>
+        <button class="cool-button" id="openSpaceProxyButton"><img src="https://tse4.mm.bing.net/th?id=OIP.oHaEv67q2aLUjCn5o7YF6gHaDQ&pid=Api&P=0&h=180" width="75%" height="65%"><br>Space Proxy</button>
+        <button class="cool-button" id="ninja"><img src="https://tse4.mm.bing.net/th?id=OIP.nfTo_IOQZH8W2GlpYrZTdgHaDW&pid=Api&P=0&h=180" width="75%" height="65%"><br>ninja.io</button>
+        <button class="cool-button" id="bloxd"><img src="https://tse1.mm.bing.net/th?id=OIP.JB-8_klUpUsJKkKisUkdigHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>bloxd.io</button>
+        <button class="cool-button" id="chatgpt"><img src="https://tse4.mm.bing.net/th?id=OIP.DddvvaLZ0h8_ifcrnrDpyQHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Chatgpt</button>
+        <button class="cool-button" id="paper"><img src="https://tse3.mm.bing.net/th?id=OIP.HLuwGPmUzFuQTiTbyahodAAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Paper.io</button>
+        <button class="cool-button" id="gladihoppers"><img src="https://tse1.mm.bing.net/th?id=OIP.ukeSqa3ttFFfLviUODIlKQHaDn&pid=Api&P=0&h=180" width="75%" height="65%"><br>Gladihoppers</button>
+        <button class="cool-button" id="shortrace"><img src="https://tse4.mm.bing.net/th?id=OIP.v57Hn7eYitvWuiMR4VxR3AHaEM&pid=Api&P=0&h=180" width="75%" height="65%"><br>Shortcut Race</button>
+        <button class="cool-button" id="choporc"><img src="https://tse1.mm.bing.net/th?id=OIP.uihIQo1bkW35TxlKqTMcNwHaD0&pid=Api&P=0&h=180" width="75%" height="65%"><br>Choppy Orc</button>
+        <button class="cool-button" id="polytrack"><img src="https://tse2.mm.bing.net/th?id=OIP.lUMJvNYW2YDWplM6Tkp27gHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Poly Track</button>
+        <button class="cool-button" id="cutrope"><img src="https://tse4.mm.bing.net/th?id=OIP.TNWFNwsWFUar7uvJG4opZgAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Cut the Rope</button>
+        <button class="cool-button" id="pixelshooter"><img src="https://tse1.mm.bing.net/th?id=OIP.8IPfil6f90_E6fZAqSnzCwHaEH&pid=Api&P=0&h=180" width="75%" height="65%"><br>Pixel Shooter</button>
+        <button class="cool-button" id="superhot"><img src="https://tse4.mm.bing.net/th?id=OIP.QUz-pD9VW2ejftSgOdx2xwHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Super Hot</button>
+        <button class="cool-button" id="funobby"><img src="https://tse2.mm.bing.net/th?id=OIP.eP44tchHq5BywzjJfJuO0gHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Fun Obby</button>
+        <button class="cool-button" id="gunspin"><img src="https://tse1.mm.bing.net/th?id=OIP.CpUuMCJMnqNpSluB2erX8gHaEM&pid=Api&P=0&h=180" width="75%" height="65%"><br>Gun Spin</button>
+        <button class="cool-button" id="jellytruck"><img src="https://tse2.mm.bing.net/th?id=OIP.Z1SBv8VVtPjXamt9crwv9AAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Jelly Truck</button>
+        <button class="cool-button" id="stickgun"><img src="https://tse1.mm.bing.net/th?id=OIP.vhWo1oEUFGhvT-K-nR_sqAHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Stickman Gun Fight</button>
+        <button class="cool-button" id="granny"><img src="https://tse2.mm.bing.net/th?id=OIP.WcbL879DF66y2xdozAzuXgHaEj&pid=Api&P=0&h=180" width="75%" height="65%"><br>Granny</button>
+        <button class="cool-button" id="1v1lol"><img src="https://tse3.mm.bing.net/th?id=OIP.ieJF2l4ZJ0F-oagtSqtJowHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>1v1.lol</button>
+        <button class="cool-button" id="monkeymart"><img src="https://tse2.mm.bing.net/th?id=OIP.GmKIjCrlse8QXE9EB8175gHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Monkey Mart</button>
+        <button class="cool-button" id="ironsnout"><img src="https://tse4.mm.bing.net/th?id=OIP.S6oqZeOdDceQ5jSOX8SJZgHaEP&pid=Api&P=0&h=180" width="75%" height="65%"><br>iron snout</button>
+        <button class="cool-button" id="bitlife"><img src="https://tse1.mm.bing.net/th?id=OIP.phveCkF0phH_6YzbNVlo8AHaCe&pid=Api&P=0&h=180" width="75%" height="65%"><br>bitlife</button>
+        <button class="cool-button" id="slope3"><img src="https://tse2.mm.bing.net/th?id=OIP.tcd4-agfPH8IleyFmuB6CQHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>slope 3</button>
+        <button class="cool-button" id="slopey"><img src="https://tse1.mm.bing.net/th?id=OIP.VD10XXy_vL6LovrjGsUx-QHaEo&pid=Api&P=0&h=180" width="75%" height="65%"><br>slopey</button>
+        <button class="cool-button" id="cookie"><img src="https://tse4.mm.bing.net/th?id=OIP.RuUX2xlZdDLu0zN8kBCIGAHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>cookie clicker</button>
+        <button class="cool-button" id="angrybirds"><img src="https://tse1.mm.bing.net/th?id=OIP.LhKQZKI_lR4S4_BAd9ZxFQHaE6&pid=Api&P=0&h=180" width="75%" height="65%"><br>angry birds</button>
+      <button class="cool-button" id="foggyfox"><img src="https://tse1.mm.bing.net/th?id=OIP.IYDT1qU4omkJfHSXLvF_jgHaEW&pid=Api&P=0&h=180" width="75%" height="65%"><br>foggy fox</button>
+      <button class="cool-button" id="darkroom"><img src="https://tse1.mm.bing.net/th?id=OIP.ix15eSnAHXU-GpHYc1QL0gAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>a dark room</button>
+      <button class="cool-button" id="10dawn"><img src="https://tse2.mm.bing.net/th?id=OIP.Kq4jLVkO82hDFcBOl0tJuAHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>10 minutes till dawn</button>
+      <button class="cool-button" id="ninja"><img src="https://tse4.mm.bing.net/th?id=OIP.nfTo_IOQZH8W2GlpYrZTdgHaDW&pid=Api&P=0&h=180" width="75%" height="65%"><br>ninja.io</button>
+      <button class="cool-button" id="ovo"><img src="https://tse1.mm.bing.net/th?id=OIP.loJ_h5qpwN6eZCDKQEoxwQHaC9&pid=Api&P=0&h=180" width="75%" height="65%"><br>ovo</button>
+      <button class="cool-button" id="twobox"><img src="https://tse2.mm.bing.net/th?id=OIP.LxLLjmJCnR3nfZJKaaxzAAHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>two neon boxes</button>
+      <button class="cool-button" id="tombmask"><img src="https://tse2.mm.bing.net/th?id=OIP.i1YglA39XfK8bGOZsqcwcwHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>tomb of the mask</button>
+      <button class="cool-button" id="eggycar"><img src="https://tse2.mm.bing.net/th?id=OIP.8rusvmSjuyafH-Y73iU4dgHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>eggy car</button>
+      <button class="cool-button" id="blockpost"><img src="https://tse2.mm.bing.net/th?id=OIP.9uXSy8TYIgOW-dVynr1m9wHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>block post</button>
+      <button class="cool-button" id="dta9"><img src="https://tse3.mm.bing.net/th?id=OIP.LekGKlyJzarIfykestvQygCgB4&pid=Api&P=0&h=180" width="75%" height="65%"><br>dta 9</button>
+      <button class="cool-button" id="dta6"><img src="https://tse4.mm.bing.net/th?id=OIP.UUlZt_m9Q5rgcnSE18h6BAAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>dta 6</button>
+      <button class="cool-button" id="tallio"><img src="https://tse4.mm.bing.net/th?id=OIP.nywt57e1SdiyQzk4AImv7QHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>tall.io</button>
+      <button class="cool-button" id="protectmydog"><img src="https://tse3.mm.bing.net/th?id=OIP.wJHzamNyZWsT7GsWI6TQfwHaEM&pid=Api&P=0&h=180" width="75%" height="65%"><br>protect my dog</button>
+      <button class="cool-button" id="dgmn2"><img src="https://tse4.mm.bing.net/th?id=OIP.i0RUFCEH4yfzLn4dagtYjgHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>doge miner 2</button>
     </div>
 
     <script>
@@ -315,52 +298,7 @@
             document.getElementById('themeDropdown').style.display = 'none';
         }
 
-        const buttons = document.querySelectorAll('.cool-button');
-        const buttonsPerPage = 5;
-        let currentPage = 1;
-
-        function showPage(page) {
-            buttons.forEach((button, index) => {
-                button.classList.remove('show');
-                if (index >= (page - 1) * buttonsPerPage && index < page * buttonsPerPage) {
-                    button.classList.add('show');
-                }
-            });
-        }
-
-        function updatePagination() {
-            document.getElementById('prevPage').disabled = currentPage === 1;
-            document.getElementById('nextPage').disabled = currentPage === Math.ceil(buttons.length / buttonsPerPage);
-        }
-
-        document.getElementById('prevPage').addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                showPage(currentPage);
-                updatePagination();
-            }
-        });
-
-        document.getElementById('nextPage').addEventListener('click', () => {
-            if (currentPage < Math.ceil(buttons.length / buttonsPerPage)) {
-                currentPage++;
-                showPage(currentPage);
-                updatePagination();
-            }
-        });
-
-        // Initial setup
-        showPage(currentPage);
-        updatePagination();
-
-        // Filter buttons based on search query
-        document.getElementById('searchBar').addEventListener('input', function() {
-            const query = this.value.toLowerCase();
-            buttons.forEach(button => {
-                button.style.display = button.textContent.toLowerCase().includes(query) ? 'inline-block' : 'none';
-            });
-        });
-                // Open URLs in Blob
+        // Open URLs in Blob
         function openBlobUrl(url) {
             const iframeHTML = `
                 <!DOCTYPE html>
