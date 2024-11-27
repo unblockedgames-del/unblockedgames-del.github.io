@@ -121,11 +121,37 @@
             gap: 5px; /* Space between buttons */
             width: 100%; /* Adjust width as needed */
         }
+        /* ... your existing styles */
+
+        /* ... your existing styles */
+
+        #popup {
+          display: block; /* Initially show the pop-up */
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          padding: 40px;  /* Increase padding */
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Increase shadow */
+          z-index: 100; /* Ensure it's above other elements */
+          width: 75%;  /* Make it wider */
+          max-width: 500px; /* Set a maximum width */
+        }
+
+        .close-button {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          cursor: pointer;
+          font-size: 25px; /* Increase font size */
+        }
     </style><link rel="stylesheet" href="./upd2_files/css" media="all"><link rel="stylesheet" href="./upd2_files/css" media="all">
 </head>
 <body>
-  <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
-	<div class="settings-container">
+  <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
+    <div class="settings-container">
         <button id="settingsButton">Settings</button>
         <div class="theme-dropdown" id="themeDropdown">
             <button onclick="changeTheme(&#39;light&#39;)">Light Theme</button>
@@ -144,6 +170,12 @@
             <button onclick="changeTheme(&#39;contrast&#39;)">High Contrast Theme</button>
         </div>
     </div>
+      <div id="popup">
+        <span class="close-button">&times;</span>
+        <h2>New Games Added      V2.0.1</h2>
+        <p>If this site is blocked visit <a href="https://script.google.com/macros/s/AKfycbwIVob0w7DMT-szl6NXAGuNxK3_qgpJF_7ZSBNW2JZ08qm3zeyl8PyepvC55BeSwmSEgQ/exec">here</a> or <a href="https://sites.google.com/view/mathclassforever/yay">here</a></p>
+          <p>Guys I finally checked the request form and added learn 2 fly. Still working on the other games.</p>
+      </div>
     <h1>Unblocked Game Links</h1>
     <h1>ctrl+F to search for games</h1>
 
@@ -154,6 +186,8 @@
         <button class="cool-button" id="gr"><img src="https://tse1.mm.bing.net/th?id=OIP.VRdMj_cZE3DCtUyb54YFeAHaHa&pid=Api&P=0&h=180" width="75%" height="65%"><br>Game Request</button>
         <button class="cool-button" id="openBlobButton"><img src="https://tse3.mm.bing.net/th?id=OIP.cdVwTuF7Zi0k-dXo-ack3wAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Rammer Head</button>
         <button class="cool-button" id="openSpaceProxyButton"><img src="https://tse4.mm.bing.net/th?id=OIP.oHaEv67q2aLUjCn5o7YF6gHaDQ&pid=Api&P=0&h=180" width="75%" height="65%"><br>Space Proxy</button>
+        <button class="cool-button" id="learnfly"><img src="https://tse1.mm.bing.net/th?id=OIP.Vx1Bclsc1pMRWZyjmzeZSAAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>Learn 2 fly</button>
+
         <button class="cool-button" id="ninja"><img src="https://tse4.mm.bing.net/th?id=OIP.nfTo_IOQZH8W2GlpYrZTdgHaDW&pid=Api&P=0&h=180" width="75%" height="65%"><br>ninja.io</button>
         <button class="cool-button" id="bloxd"><img src="https://tse1.mm.bing.net/th?id=OIP.JB-8_klUpUsJKkKisUkdigHaD4&pid=Api&P=0&h=180" width="75%" height="65%"><br>bloxd.io</button>
         <button class="cool-button" id="chatgpt"><img src="https://tse4.mm.bing.net/th?id=OIP.DddvvaLZ0h8_ifcrnrDpyQHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>Chatgpt</button>
@@ -205,6 +239,7 @@
       <button class="cool-button" id="bumpio"><img src="https://tse4.mm.bing.net/th?id=OIP.F0hrHmr99shh5AP8Hy2JYAAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>bump.io</button>
       <button class="cool-button" id="knightarena"><img src="https://tse4.mm.bing.net/th?id=OIP.QX5b4s9fVDxljkCaf9FweAAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>knight arena io</button>
       <button class="cool-button" id="knifeio"><img src="https://tse1.mm.bing.net/th?id=OIP.3xmWEAGUOGFDe5XdQ8R__gHaEK&pid=Api&P=0&h=180" width="75%" height="65%"><br>knife io</button>
+      <button class="cool-button" id="burritobison"><img src="https://tse2.mm.bing.net/th?id=OIP.t_ircTCQFSwBVCsfV6ah6wAAAA&pid=Api&P=0&h=180" width="75%" height="65%"><br>burrito bison</button>
 
 
 
@@ -345,6 +380,16 @@
             window.open(blobUrl);
         }
 
+        // ... your existing code ...
+
+        const popup = document.getElementById('popup');
+        const closeButton = document.querySelector('.close-button');
+
+        closeButton.onclick = () => {
+          popup.style.display = 'none'; // Hide the popup when the "X" is clicked
+        };
+
+        // ... your existing code ...
         document.getElementById('openBlobButton').addEventListener('click', () => openBlobUrl('https://testmode.lhost.dev'));
         document.getElementById('openSpaceProxyButton').addEventListener('click', () => openBlobUrl('https://jayden-is.bestar.sg/'));
         document.getElementById('paper').addEventListener('click', () => openBlobUrl('https://sgs-game-cdn.pages.dev/Projects/Paper.io%202/main'));
@@ -394,5 +439,7 @@
           document.getElementById('bumpio').addEventListener('click', () => openBlobUrl('https://html5.gamemonetize.com/6ei41d81g4bj7alkgvudj88fvws7y5n4/'));
           document.getElementById('knightarena').addEventListener('click', () => openBlobUrl('https://html5.gamemonetize.co/jk1td0afcrs97lw6bdk8grh4huukppu8/'));
           document.getElementById('knifeio').addEventListener('click', () => openBlobUrl('https://html5.gamemonetize.co/98fobvogybhln41bs1hwj35wfuvfllku/'));
+          document.getElementById('burritobison').addEventListener('click', () => openBlobUrl('https://unblockedgames-del.github.io/burritobison'));
+          document.getElementById('learnfly').addEventListener('click', () => openBlobUrl('https://unblockedgames-del.github.io/learn2fly'));
 
     </script>
