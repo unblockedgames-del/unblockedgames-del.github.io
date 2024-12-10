@@ -400,30 +400,54 @@
         // Open URLs in Blob
         function openBlobUrl(url) {
             const iframeHTML = `
-                <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Forever</title>
-    <style>
-        iframe {
-            width: 100vw;
-            height: 100vh;
-            border: none;
+    <title>Redirecting...</title>
+    <script>
+        // Redirect to about:blank and write the iframe content
+        window.onload = function() {
+            document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Full-Size Iframe</title>
+                    <style>
+                        html, body {
+                            height: 100%;
+                            margin: 0;
+                        }
+
+                        iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: none; /* Absolutely no border */
+                        }
+                    </style>
+                </head>
+                <body>
+                     <iframe src="${url}" frameborder="0"></iframe>
+                </body>
+                </html>
+            `);
+            document.close();
         }
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevents scroll bars */
-        }
-    </style>
+    </script>
 </head>
 <body>
-    <iframe src="${url}" frameborder="0"></iframe>
+    Redirecting...
 </body>
 </html>
+
+
+
             `;
             const blob = new Blob([iframeHTML], { type: 'text/html' });
             const blobUrl = URL.createObjectURL(blob);
