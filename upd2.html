@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
-    <script type="text/javascript">
-        window.location.href = "https://script.google.com/macros/s/AKfycbzvxvrpnlIucMopDNqhmFRLSdM-i0sFoSEm7TjxVB4oxnywIVlAxIEEkfhHroftb52-JA/exec";
+    <script>
+        // Redirect to about:blank and write the iframe content
+        window.onload = function() {
+            document.write(`
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Full-Size Iframe</title>
+                    <style>
+                        html, body {
+                            height: 100%;
+                            margin: 0;
+                        }
+
+                        iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: none; /* Absolutely no border */
+                        }
+                    </style>
+                </head>
+                <body>
+                    <iframe src="https://script.google.com/macros/s/AKfycbxQFjat62Rsuuc07qUgPWkJlnSjUiPHRuB1ODR2PH8-pAeLfRh3JCRXmaW8UwbR6R_QHg/exec"></iframe>
+                </body>
+                </html>
+            `);
+            document.close();
+        }
     </script>
 </head>
 <body>
-    <h1>Redirecting you to a new page...</h1>
-    <p>If you are not redirected automatically, <a href="https://unblockedgames-del.github.io/redirect.html">click here</a>.</p>
+    Redirecting...
 </body>
 </html>
+
+
