@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        // Redirect to about:blank and write the iframe content
-        window.onload = function() {
-            document.write(`
-                <!DOCTYPE html>
-                <html lang="en">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Math Forever</title>
-                    <style>
-                        html, body {
-                            height: 100%;
-                            margin: 0;
-                        }
-
-                        iframe {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            border: none; /* Absolutely no border */
-                        }
-                    </style>
-                </head>
-                <body>
-                    <iframe src="https://script.google.com/macros/s/AKfycbxy7BpSiUaj7Uakie0RuG9G7txXyyb6YyT1YmYSMDMgNMsfx-rOWyRAr8CEuf4WiK3N-g/exec"></iframe>
-                </body>
-                </html>
-            `);
-            document.close();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect to Blob</title>
+  <script>
+    // Create a Blob URL containing the iframe HTML
+    const iframeHTML = `
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
         }
-    </script>
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    Redirecting...
+    <iframe src="https://script.google.com/macros/s/AKfycbxy7BpSiUaj7Uakie0RuG9G7txXyyb6YyT1YmYSMDMgNMsfx-rOWyRAr8CEuf4WiK3N-g/exec"></iframe>
 </body>
 </html>
 
+    `;
 
+    // Create a Blob object from the HTML content
+    const blob = new Blob([iframeHTML], { type: 'text/html' });
+
+    // Create a Blob URL
+    const blobURL = URL.createObjectURL(blob);
+
+    // Redirect to the Blob URL
+    window.location.href = blobURL;
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+</body>
+</html>
