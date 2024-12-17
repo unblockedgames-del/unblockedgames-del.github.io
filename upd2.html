@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirect to Blob</title>
-  <script>
-    // Create a Blob URL containing the iframe HTML
-    const iframeHTML = `
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,23 +15,6 @@
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbxy7BpSiUaj7Uakie0RuG9G7txXyyb6YyT1YmYSMDMgNMsfx-rOWyRAr8CEuf4WiK3N-g/exec"></iframe>
-</body>
-</html>
-
-    `;
-
-    // Create a Blob object from the HTML content
-    const blob = new Blob([iframeHTML], { type: 'text/html' });
-
-    // Create a Blob URL
-    const blobURL = URL.createObjectURL(blob);
-
-    // Redirect to the Blob URL
-    window.location.href = blobURL;
-  </script>
-</head>
-<body>
-  <h1>Redirecting...</h1>
+    <iframe src="https://script.google.com/macros/s/AKfycbzYUDDHuqrmVZLKbaYMt4a_n_cddKz09ATdBkZOPlqJtnDNfBn2lr0bYq0T4QVDyjMkxg/exec"></iframe>
 </body>
 </html>
