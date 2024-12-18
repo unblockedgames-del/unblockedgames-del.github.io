@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Fullscreen Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centers the text horizontally */
+        }
+
+        h1 {
+            text-align: center; /* Ensure the h1 is centered */
+            margin-top: 20px; /* Add some space at the top */
+        }
+
+        #iframe-container {
+            position: relative;
+            width: 50%;
+            height: 50vh; /* 50% of the viewport height */
+            margin: 20px auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #fullscreen-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #fullscreen-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Another Trade</h1>
+
+<div id="iframe-container">
+    <iframe src="https://famobi.cdn.start.gg/9njb654d39wx/v2/index.html?msstart_sdk_init=eyJwYXJlbnRPcmlnaW4iOiJodHRwczovL3d3dy5tc24uY29tIiwiY2xpZW50SWQiOiIzRjg0NzczOTI0NEM2Nzc5MTEwQzYyMzUyNTVFNjZENyIsImxvY2FsZSI6ImVuLXVzIiwiZW50cnlQb2ludElkIjoiIn0
+" id="iframe"></iframe>
+</div>
+
+<button id="fullscreen-btn">Go Fullscreen</button>
+
+<script>
+    const iframe = document.getElementById('iframe');
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    const iframeContainer = document.getElementById('iframe-container');
+
+    fullscreenBtn.addEventListener('click', function() {
+        // Toggle fullscreen
+        if (iframeContainer.style.position === 'fixed') {
+            // Exit fullscreen
+            iframeContainer.style.position = 'relative';
+            iframeContainer.style.width = '50%';
+            iframeContainer.style.height = '50vh';
+            fullscreenBtn.textContent = 'Go Fullscreen';
+        } else {
+            // Enter fullscreen
+            iframeContainer.style.position = 'fixed';
+            iframeContainer.style.top = '0';
+            iframeContainer.style.left = '0';
+            iframeContainer.style.width = '100%';
+            iframeContainer.style.height = '100vh';
+            fullscreenBtn.textContent = 'Exit Fullscreen';
+        }
+    });
+</script>
+
+</body>
+</html>
