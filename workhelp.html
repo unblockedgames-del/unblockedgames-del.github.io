@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Forever Help</title>
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/smoressy/star/main/star-removebg-preview.png">
+  <style type="text/css">@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/400/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/600/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/600/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/700/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+            ::selection {
+            background-color: #B60086 !important;
+            color: #000000 !important;
+        }
+           * {
+            overscroll-behavior-x: none !important;
+        }
+            :root {
+            color-scheme: dark;
+        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #ffffff;
+      transition: all 0.3s ease;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(98, 0, 234, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(187, 134, 252, 0.1) 0%, transparent 20%);
+    }
+
+    ::placeholder {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      color: #b3b3b3;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #bb86fc;
+      text-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
+    }
+
+    .toggle {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .toggle button {
+      background: rgba(31, 31, 31, 0.8);
+      color: #ffffff;
+      border: 2px solid #333;
+      padding: 12px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      backdrop-filter: blur(10px);
+    }
+
+    .toggle button.active {
+      background: #6200ea;
+      border-color: #7c4dff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(98, 0, 234, 0.3);
+    }
+
+    .toggle button:hover {
+      background: #3700b3;
+      transform: translateY(-1px);
+    }
+
+    .content {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+
+    .content.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .input-field {
+      background: rgba(31, 31, 31, 0.8);
+      color: #ffffff;
+      border: 2px solid #333;
+      padding: 15px;
+      border-radius: 12px;
+      width: 100%;
+      margin-bottom: 15px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .input-field:focus {
+      border-color: #bb86fc;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+    }
+
+    .submit-btn {
+      background: #6200ea;
+      color: #ffffff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 auto;
+    }
+
+    .submit-btn:hover {
+      background: #3700b3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(98, 0, 234, 0.3);
+    }
+
+    .submit-btn:disabled {
+      background: #666;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .result, .response {
+      margin-top: 25px;
+      font-size: 1.1em;
+      color: #bb86fc;
+      background: rgba(41, 41, 41, 0.8);
+      padding: 20px;
+      border-radius: 12px;
+      border: 2px solid #333;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.3s ease;
+      text-align: left;
+    }
+
+    .answer-box {
+      margin-top: 15px;
+      padding: 15px;
+      background: rgba(98, 0, 234, 0.1);
+      border-radius: 8px;
+      border-left: 4px solid #bb86fc;
+    }
+
+    .answer-choice {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #bb86fc;
+      margin-bottom: 10px;
+    }
+
+    .answer-name {
+      font-size: 1.1em;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .answer-reason {
+      font-size: 0.9em;
+      color: #888888;
+      line-height: 1.4;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(31, 31, 31, 0.8);
+      color: #ffffff;
+      border: 2px solid #333;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .theme-toggle:hover {
+      background: #3700b3;
+      transform: rotate(180deg);
+    }
+
+    .light-mode {
+      background-color: #f8f9fa;
+      color: #121212;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(98, 0, 234, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(187, 134, 252, 0.05) 0%, transparent 20%);
+    }
+
+    .light-mode .input-field {
+      background: rgba(255, 255, 255, 0.9);
+      color: #121212;
+      border-color: #ddd;
+    }
+
+    .light-mode .submit-btn {
+      background: #6200ea;
+      color: #ffffff;
+    }
+
+    .light-mode .result, .light-mode .response {
+      color: #6200ea;
+      background: rgba(255, 255, 255, 0.9);
+      border-color: #ddd;
+    }
+
+    .light-mode .theme-toggle {
+      background: #6200ea;
+      color: #ffffff;
+    }
+
+    .light-mode .answer-box {
+      background: rgba(98, 0, 234, 0.05);
+    }
+
+    .light-mode .answer-choice {
+      color: #6200ea;
+    }
+
+    .light-mode .answer-name {
+      color: #121212;
+    }
+
+    .light-mode .answer-reason {
+      color: #666666;
+    }
+
+    .lds-ring {
+      display: inline-block;
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+
+    .lds-ring div {
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin: 2px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    .light-mode .lds-ring div {
+      border-color: #121212 transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) { animation-delay: -0.45s; }
+    .lds-ring div:nth-child(2) { animation-delay: -0.3s; }
+    .lds-ring div:nth-child(3) { animation-delay: -0.15s; }
+
+    @keyframes lds-ring {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 59, 48, 0.9);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    textarea.input-field {
+      min-height: 120px;
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+  <div class="container">
+    <h1 class="logo">✨ Math Forever Help</h1>
+    <div class="toggle">
+      <button class="toggle-btn" data-target="multiple-choice">
+        <i class="fas fa-list-alt icon"></i> Multiple Choice
+      </button>
+      <button class="toggle-btn" data-target="fill-in">
+        <i class="fas fa-pencil-alt icon"></i> Fill In
+      </button>
+      <button class="toggle-btn" data-target="open-ended">
+        <i class="fas fa-question icon"></i> Open Ended
+      </button>
+    </div>
+    <div class="content multiple-choice" id="multiple-choice">
+      <input type="text" class="input-field" id="multiple-choice-input" placeholder="Type your multiple choice question here...">
+      <button class="submit-btn" onclick="generateMultipleChoice()" id="multiple-choice-btn">
+        <span>Submit</span>
+        <div class="lds-ring" style="display: none"><div></div><div></div><div></div><div></div></div>
+      </button>
+      <div class="result" id="multiple-choice-result" style="display: none;"></div>
+    </div>
+    <div class="content fill-in" id="fill-in">
+      <input type="text" class="input-field" id="fill-input" placeholder="Type a sentence with a blank (_) to fill in..." />
+      <button class="submit-btn" onclick="generateFillIn()" id="fill-in-btn">
+        <span>Submit</span>
+        <div class="lds-ring" style="display: none"><div></div><div></div><div></div><div></div></div>
+      </button>
+      <div class="result" id="fill-in-result" style="display: none;"></div>
+    </div>
+    <div class="content open-ended" id="open-ended">
+      <textarea class="input-field" id="open-ended-input" placeholder="Type your open-ended question here..."></textarea>
+      <button class="submit-btn" onclick="generateOpenEnded()" id="open-ended-btn">
+        <span>Submit</span>
+        <div class="lds-ring" style="display: none"><div></div><div></div><div></div><div></div></div>
+      </button>
+      <div class="response" id="open-ended-response" style="display: none;"></div>
+    </div>
+  </div>
+  <div class="toast" id="rate-limit-toast">Please wait a few seconds before trying again</div>
+  <script>
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    const contentSections = document.querySelectorAll('.content');
+    const themeToggle = document.getElementById('theme-toggle');
+    const toast = document.getElementById('rate-limit-toast');
+    let lastApiCall = 0;
+
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        toggleButtons.forEach(btn => btn.classList.remove('active'));
+        contentSections.forEach(section => section.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(button.getAttribute('data-target')).classList.add('active');
+      });
+    });
+    toggleButtons[0].classList.add('active');
+    contentSections[0].classList.add('active');
+
+    let isDarkMode = true;
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      isDarkMode = !isDarkMode;
+      themeToggle.innerHTML = isDarkMode ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
+
+    function showToast() {
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    function setLoading(buttonId, loading) {
+      const button = document.getElementById(buttonId);
+      const spinner = button.querySelector('.lds-ring');
+      const text = button.querySelector('span');
+      
+      button.disabled = loading;
+      spinner.style.display = loading ? 'inline-block' : 'none';
+      text.style.display = loading ? 'none' : 'inline-block';
+    }
+
+async function checkRateLimit() {
+      const now = Date.now();
+      if (now - lastApiCall < 1100) {
+        showToast();
+        return false;
+      }
+      lastApiCall = now;
+      return true;
+    }
+
+    async function generateMultipleChoice() {
+      if (!await checkRateLimit()) return;
+      
+      const input = document.getElementById('multiple-choice-input').value;
+      const result = document.getElementById('multiple-choice-result');
+      setLoading('multiple-choice-btn', true);
+
+      try {
+        const keyResponse = await fetch('https://public.smoresxo.shop/plan');
+        const keyData = await keyResponse.json();
+
+        const apiResponse = await fetch('https://public.smoresxo.shop/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Access-Level': 'mango',
+            'X-Api-Key': 'apple',
+            'X-Authentication-Token': 'pear',
+            'X-Client-Id': 'grape',
+            'X-Custom-Header': 'peach',
+            'X-Requested-With': 'plum',
+            'X-Secret-Token': 'orange',
+            'X-User-Session': 'melon',
+            'Authorization': 'banana'
+          },
+          body: JSON.stringify({
+            prompt: `{STRICT REQUIREMENT}: Respond directly to the multiple choice question. If the question is invalid, reply with "N/A" for all parts. RESPOND IN JSON FORMAT ONLY. Format: "choice" = A/B/C/D (or equivalent); "choice name" = choice label; "reason" = concise explanation for the choice. Example: { "choice": "B", "choice name": "Two", "reason": "1+1 equals 2." }. Keep reasoning concise. || -- END OF SYSTEM PROMPT -- || Users Multiple Choice Question: ${input}`,
+            key: keyData.key
+          })
+        });
+
+        const apiData = await apiResponse.json();
+        const parsedResponse = JSON.parse(apiData.message);
+        
+        result.style.display = 'block';
+        result.innerHTML = `
+          <div class="answer-box">
+            <div class="answer-choice">Answer: ${parsedResponse.choice}</div>
+            <div class="answer-name">${parsedResponse["choice name"]}</div>
+            <div class="answer-reason">${parsedResponse.reason}</div>
+          </div>
+        `;
+      } catch (error) {
+        result.style.display = 'block';
+        result.textContent = 'An error occurred. Math Forever';
+      } finally {
+        setLoading('multiple-choice-btn', false);
+      }
+    }
+
+    async function generateFillIn() {
+      if (!await checkRateLimit()) return;
+
+      const input = document.getElementById('fill-input').value;
+      const result = document.getElementById('fill-in-result');
+      setLoading('fill-in-btn', true);
+
+      try {
+        const keyResponse = await fetch('https://public.smoresxo.shop/plan');
+        const keyData = await keyResponse.json();
+
+        const apiResponse = await fetch('https://public.smoresxo.shop/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Access-Level': 'mango',
+            'X-Api-Key': 'apple',
+            'X-Authentication-Token': 'pear',
+            'X-Client-Id': 'grape',
+            'X-Custom-Header': 'peach',
+            'X-Requested-With': 'plum',
+            'X-Secret-Token': 'orange',
+            'X-User-Session': 'melon',
+            'Authorization': 'banana'
+          },
+          body: JSON.stringify({
+            prompt: `{SYSTEM PROMPT} YOU MUST REPEAT THE USERS MESSAGE EXACTLY HOW IT IS STATED, BUT FILL IN THE BLANK, IF THERE IS NO BLANK TO FILL IN (e.g "____") THEN SIMPLY JUST REPEAT. FILL IN THE USERS MESSAGE.USER MESSAGE: "${input}"`,
+            key: keyData.key
+          })
+        });
+
+        const apiData = await apiResponse.json();
+        result.style.display = 'block';
+        result.textContent = `${apiData.message}`;
+      } catch (error) {
+        result.style.display = 'block';
+        result.textContent = 'An error occurred while fetching the AI response.';
+      } finally {
+        setLoading('fill-in-btn', false);
+      }
+    }
+
+    async function generateOpenEnded() {
+      if (!await checkRateLimit()) return;
+
+      const input = document.getElementById('open-ended-input').value;
+      const result = document.getElementById('open-ended-response');
+      setLoading('open-ended-btn', true);
+
+      try {
+        const keyResponse = await fetch('https://public.smoresxo.shop/plan');
+        const keyData = await keyResponse.json();
+
+        const apiResponse = await fetch('https://public.smoresxo.shop/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-Access-Level': 'mango',
+            'X-Api-Key': 'apple',
+            'X-Authentication-Token': 'pear',
+            'X-Client-Id': 'grape',
+            'X-Custom-Header': 'peach',
+            'X-Requested-With': 'plum',
+            'X-Secret-Token': 'orange',
+            'X-User-Session': 'melon',
+            'Authorization': 'banana'
+          },
+          body: JSON.stringify({
+            prompt: `{STRICT REQUIREMENT}: Your next message must answer the open-ended question in a helpful and thoughtful manner. || END OF SYSTEM PROMPT || User Question: ${input}`,
+            key: keyData.key
+          })
+        });
+
+        const apiData = await apiResponse.json();
+        result.style.display = 'block';
+        result.textContent = `${apiData.message}`;
+      } catch (error) {
+        result.style.display = 'block';
+        result.textContent = 'An error occurred while fetching the AI response.';
+      } finally {
+        setLoading('open-ended-btn', false);
+      }
+    }
+  </script>
+</body>
+</html>
